@@ -80,6 +80,12 @@ nav a{
 }
 
 
+.right-side li img{
+    width: 20px;
+    margin-right: 10px;
+}
+
+
 @media only screen and (min-width: 992px) {
     .open-menu{
         display: none;
@@ -142,8 +148,14 @@ nav a{
         position: absolute;
     }
 
-    .right-side i{
-        font-size: 20px;
+    .right-side li a {
+        display: flex;
+        align-items: center;
+    }
+
+    .right-side li img{
+        width: 20px;
+        margin-right: 10px;
     }
 }
 
@@ -671,7 +683,7 @@ section.get-in-touch h4{
 
 @media only screen and (min-width: 992px) {
     section.get-in-touch{
-        padding-top: 5%;
+        padding-top: 0;
         flex-direction: row;
         align-items: center;
         justify-content: center;
@@ -680,5 +692,124 @@ section.get-in-touch h4{
     section.get-in-touch h4{
         font-size: 2rem;
         padding-right: 50px;
+    }
+}
+
+/**Footer Styling**/
+
+footer{
+    width: 100%;
+    background-color: #12132C;
+    color: white;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    position: relative;
+}
+
+footer a{
+    text-decoration: none;
+    color: white; 
+}
+
+footer ul{
+    list-style: none;
+    line-height: 25px;
+    font-size: 16px;
+}
+
+.contact-list{
+    margin: 15px 0;
+    text-align: center;
+}
+
+.contact-list li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.contact-list li img {
+    margin-right: 5px;
+}
+
+.contact-list li img:first-child{
+    width: 13px;
+}
+
+.contact-list li:nth-child(2) img{
+    width: 18px;
+}
+
+footer h4{
+    color: #99C5E5;
+    font-family: Lato, Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.footer-container{
+    text-align: center;
+    width: 100%;
+    padding: 50px 20%;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-logo{
+    width: 250px;
+    margin: auto;
+}
+
+.footer-logo img{
+    width: 100%;
+}
+
+.explore, .contact{
+    margin-bottom: 25px;
+}
+
+.copy-right{
+    font-family: Lato, Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: 300;
+    text-align: center;
+    padding: 15px 0;
+}
+
+@media only screen and (min-width: 992px) {
+    .footer-container{
+        max-width: 1500px;
+        margin: 0 auto;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        padding: 50px 0;
+        text-align: start;
+    }
+
+    .contact-list{
+        margin: 0;
+        text-align: start;
+    }
+
+    .contact-list li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .footer-logo{
+        margin: 0 50px 0 0;
+    }
+
+    .explore{
+        width: 20%;
+    }
+
+    .contact{
+        width: 30%;
+    }
+
+    .copy-right{
+        padding: 25px 0;
     }
 }
