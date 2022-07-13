@@ -348,7 +348,7 @@ section.hours-location h3{
     section.hours-location{
         text-align: center;
         margin: 50px auto;
-        width: 70%;
+        width: 700px;
         max-width: 1000px;
         display: flex;
         flex-direction: row;
@@ -360,17 +360,21 @@ section.hours-location h3{
     }
 
     .hours{
-        width: 40%;
-    }
-
-    .hours{
+        width: 50%;
         text-align: left;
-        padding-right: 10%;
+        padding-right: 12%;
         border-right: 2px solid #99C5E5;
     }
 
     .location{
-        width: 30%;
+        width: 50%;
+        text-align: left;
+        padding-left: 12%;
+    }
+
+    .address{
+        width: 60%;
+        margin: 10px 0;
     }
 
     section.hours-location h3{
@@ -679,24 +683,30 @@ section.biography h3{
 /**Get in Touch Styling**/
 
 section.get-in-touch{
+    position: relative;
     width: 100%;
     height: 170px;
     background-color: #c3dceeb2;
     font-family: Lato, Arial, Helvetica, sans-serif;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    padding-top: 15%;
 }
+
+.get-in-touch-container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 25%;
+    text-align: center;
+}
+
 
 section.get-in-touch h4{
     font-size: 1rem;
 }
 
 @media only screen and (min-width: 992px) {
-    section.get-in-touch{
-        padding-top: 0;
-        flex-direction: row;
+    .get-in-touch-container{
+        top: 0%;
+        display: flex;
         align-items: center;
         justify-content: center;
     }
@@ -780,6 +790,15 @@ footer h4{
     margin-bottom: 25px;
 }
 
+.footer-social-links a{
+    margin: 0 5px;
+    transition: all 200ms ease-in-out;
+}
+
+.footer-social-links a:hover{
+    opacity: .8;
+}
+
 .copy-right{
     font-family: Lato, Arial, Helvetica, sans-serif;
     font-size: 11px;
@@ -800,7 +819,7 @@ footer h4{
     }
 
     .contact-list{
-        margin: 0;
+        margin: 20px 0 0 0;
         text-align: start;
     }
 
@@ -814,7 +833,7 @@ footer h4{
     }
 
     .explore{
-        width: 20%;
+        width: 15%;
     }
 
     .contact{
