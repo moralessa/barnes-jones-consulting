@@ -1,22 +1,49 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Roboto:wght@500&family=Ubuntu:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@font-face {
+    font-family: Aurel-bold;
+    src: url('../fonts/Aurel bold.otf');
+}
 
+@font-face {
+    font-family: Aurel-light;
+    src: url('../fonts/Aurel\ light.otf');
+}
+
+@font-face {
+    font-family: MyriadPro-Regular;
+    src: url(../fonts/MyriadPro-Regular.otf);
+}
+
+/*Global Styling*/
 *, *::after, *::before{
     box-sizing: border-box;
     margin:0;
     padding: 0;
 }
 
-
-html, body{
-    width: 100%;
-    height: 100vh;
-}
-
-
 body{
-    font-size: 15px;
+    font-size: 20px;
 }
+
+header, footer{
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: Aurel-bold, Arial, Helvetica, sans-serif;
+}
+
+p{
+    font-family: MyriadPro-Regular, Arial, Helvetica, sans-serif;
+}
+
+button{
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
 
 /**Header Styling**/
 
@@ -41,7 +68,6 @@ nav a{
     width: 100%;
     height: auto;
     padding: .5rem;
-    font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
 
 .logo-container{
@@ -176,7 +202,7 @@ nav a{
     width: 100%;
     height: 400px;
     overflow: hidden;
-    position: static;
+    position: relative;
     padding-top: 100px;
 }
 
@@ -204,31 +230,31 @@ nav a{
 
 .hero-text{
     position: absolute;
-    top: 20%;
-    z-index: 2;
     height: 100%;
     width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    z-index: 2;
     text-align: center;
 }
 
 .hero-text h2{
+    font-family: Aurel-light, Arial, Helvetica, sans-serif;
     color: white;
-    font-family: Lato, Arial, Helvetica, sans-serif;
-    font-weight: 300;
     font-size: 25px;
-    line-height: 30px;
-    letter-spacing: 8px;
+    line-height: 32px;
+    letter-spacing: 13.2px;
 }
 
 .hero-text h2:first-child{
-    letter-spacing: 2px;
-    font-family: Ubuntu, Arial, Helvetica, sans-serif;
+    font-family: Aurel-bold, Arial, Helvetica, sans-serif;
+    letter-spacing: 5px;
 }
 
 button.call-to-action{
     display: block;
     margin: auto;
-    font-family: Lato, Arial, Helvetica, sans-serif;
     color: white;
     padding: .7rem 1.2rem;
     font-size: .8rem;
@@ -275,18 +301,15 @@ button.secondary{
         background: linear-gradient(rgba(18, 19, 44, 0.5), rgb(10, 11, 19));
     }
 
-    .hero-text{
-        top: 35%;
-    }
-
+   
     .hero-text h2{
         font-size: 80px;
-        line-height: 70px;
+        line-height: 90px;
         letter-spacing: 30px;
     }
 
     .hero-text h2:first-child{
-        letter-spacing: 12px;
+        letter-spacing: 8px;
     }
 
     .hero-text h2:nth-child(2){
@@ -315,13 +338,15 @@ section.hours-location{
 }
 
 section.hours-location h3{
-    font-family: Ubuntu, Arial, Helvetica, sans-serif;
-    font-weight: 700;
+    font-family: MyriadPro-Regular, Arial, Helvetica, sans-serif;
+}
+
+.hours, .location{
+    font-family: MyriadPro-Regular, Arial, Helvetica, sans-serif;
 }
 
 .schedule {
     margin-top: 10px;
-    font-family: Lato, Arial, Helvetica, sans-serif;
     font-weight: 400;
     display: flex;
     justify-content: center;
@@ -339,7 +364,6 @@ section.hours-location h3{
 }
 
 .address{
-    font-family: Lato, Arial, Helvetica, sans-serif;
     width: 60%;
     margin: 10px auto;
 }
@@ -399,9 +423,8 @@ section.services{
 }
 
 section.services h3{
-    font-family: Lato, Arial, Helvetica, sans-serif;
     font-size: 1.5rem;
-    font-weight: 700;
+    font-family: Aurel-light, Arial, Helvetica, sans-serif;
     color: black;
 }
 
@@ -470,8 +493,7 @@ section.services h3{
 }
 
 .services-cards-mobile .card-header h4{
-    font-family: Lato, Arial, Helvetica, sans-serif;
-    font-weight: 700;
+    font-family: Aurel-light, Arial, Helvetica, sans-serif;
 }
 
 .services-cards-mobile .card-header{
@@ -479,8 +501,7 @@ section.services h3{
 }
 
 .services-cards-mobile .card-body{
-    font-family: Lato, Arial, Helvetica, sans-serif;
-    font-weight: 500;
+    font-family: MyriadPro-Regular, Arial, Helvetica, sans-serif;
     font-size: 1rem;
     margin: 0 10px;
 }
@@ -542,8 +563,7 @@ section.services h3{
     }
 
     .services-cards-desktop .card-header h4{
-        font-family: Lato, Arial, Helvetica, sans-serif;
-        font-weight: 700;
+        font-family: Aurel-light, Arial, Helvetica, sans-serif;
         font-size: 30px;
     }
     
@@ -552,9 +572,7 @@ section.services h3{
     }
     
     .services-cards-desktop .card-body{
-        font-family: Lato, Arial, Helvetica, sans-serif;
-        font-weight: 500;
-        font-size: 16px;
+        font-family: MyriadPro-Regular, Arial, Helvetica, sans-serif;
         margin: 0 10px;
     }
 }
@@ -566,9 +584,8 @@ section.biography{
 }
 
 section.biography h3{
-    font-family: Lato, Arial, Helvetica, sans-serif;
     font-size: 26px;
-    font-weight: 700;
+    font-family: Aurel-light, Arial, Helvetica, sans-serif;
     color: black;
     text-align: center;
     margin: 20px;
@@ -590,13 +607,13 @@ section.biography h3{
 }
 
 .intro-text{
-    font-family: Lato, Arial, Helvetica, sans-serif;
     margin-top: 20px;
 }
 
 .intro-text h4:first-child{
     color: black;
     font-size: 22px;
+    font-family: MyriadPro-Regular, Arial, Helvetica, sans-serif;
 }
 
 .intro-text h4{
@@ -606,8 +623,7 @@ section.biography h3{
 
 .biography-text{
     margin: 20px auto;
-    font-family: Lato, Arial, Helvetica, sans-serif;
-    font-size: 15px;
+    font-size: 16px;
 }
 
 .biography-credentials{
@@ -654,14 +670,12 @@ section.biography h3{
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 20%;
+        width: 25%;
         border-left: 2px solid #99C5E5;
-        padding-left: 50px;
-        font-family: Lato, Arial, Helvetica, sans-serif;
-        font-size: 16px;
     }
 
     .biography-credentials h4{
+        font-family: Aurel-light, Arial, Helvetica, sans-serif;
         font-size: 30px;
         margin-bottom: 10px;
     }
@@ -675,7 +689,8 @@ section.biography h3{
     }
 
     .biography-credentials p{
-        line-height: 20px;
+        line-height: 25px;
+        font-size: 24px;
     }
 
 }
@@ -687,7 +702,6 @@ section.get-in-touch{
     width: 100%;
     height: 170px;
     background-color: #c3dceeb2;
-    font-family: Lato, Arial, Helvetica, sans-serif;
 }
 
 .get-in-touch-container{
@@ -700,7 +714,7 @@ section.get-in-touch{
 
 
 section.get-in-touch h4{
-    font-size: 1rem;
+    font-family: Aurel-light, Arial, Helvetica, sans-serif;
 }
 
 @media only screen and (min-width: 992px) {
@@ -723,7 +737,6 @@ footer{
     width: 100%;
     background-color: #12132C;
     color: white;
-    font-family: Roboto, Arial, Helvetica, sans-serif;
     position: relative;
 }
 
@@ -764,7 +777,6 @@ footer ul{
 
 footer h4{
     color: #99C5E5;
-    font-family: Lato, Arial, Helvetica, sans-serif;
     font-size: 20px;
     margin-bottom: 15px;
 }
@@ -800,9 +812,8 @@ footer h4{
 }
 
 .copy-right{
-    font-family: Lato, Arial, Helvetica, sans-serif;
-    font-size: 11px;
-    font-weight: 300;
+    font-family: inherit;
+    font-size: 16px;
     text-align: center;
     padding: 15px 0;
 }
