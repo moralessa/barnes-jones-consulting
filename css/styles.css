@@ -105,7 +105,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
  }
  
  h1, h2, h3, h4, h5, h6{
-	 font-family: Aurel-bold, Arial, Helvetica, sans-serif;
+	 font-family: Aurel-bold, Roboto, Helvetica, sans-serif;
  }
  
  p{
@@ -117,11 +117,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	 font-size: 18px;
  }
  
- 
  /**Header Styling**/
- 
-	 /**nav Styling**/
- 
+ /**nav Styling**/
  nav{
 	 position:fixed;
 	 z-index: 10;
@@ -135,6 +132,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	 text-decoration: none;
 	 width: 100%;
 	 
+ }
+
+ nav .nav-link.active{
+	color:#99C5E5;
  }
  
  .nav-container{
@@ -269,7 +270,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	 }
  }
  
-	 /**Hero Styling**/
+/**Hero Styling**/
  
  .hero-container{
 	 width: 100%;
@@ -289,6 +290,21 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	 background-position-x: -20px;
 	 transform: scale(1.2);
  }
+
+ .hero-image.about-us{
+	background-image: url('../images/about-us-hero.jpg');
+	background-size: cover;
+ }
+
+ .hero-image.community{
+	background-image: url('../images/community-hero.jpg');
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-position-y: -25px;
+	background-position-x: 10px;
+	transform: scale(1.4);
+ }
  
  .hero-image::before{
 	 display: block;
@@ -300,6 +316,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	 width: 100%;
 	 background: linear-gradient(rgba(18, 19, 44, 0.5), rgb(10, 11, 19));
  }
+
  
  .hero-logo{
 	 width: 80%;
@@ -319,8 +336,22 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	 transform: translate(-50%, -10%);
 	 z-index: 2;
 	 text-align: center;
+	 color: white;
  }
- 
+
+ .hero-text h2{
+	font-family: Aurel-bold, Arial, Helvetica, sans-serif !important;
+ }
+
+ .hero-text h2:nth-child(2){
+	font-family: Aurel-light, Arial, Helvetica, sans-serif !important;
+	font-weight: 300;
+ }
+
+ button a{
+	text-decoration: none;
+	color: white;
+ }
  
  button.call-to-action{
 	 display: block;
@@ -350,16 +381,25 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
  
  @media only screen and (min-width: 992px) {
 	 .hero-container{
-		 height: 95vh;
+		 height: 100vh;
 	 }
  
 	 .hero-image{    
 		 background-image:url('../images/home-hero-mobile.jpg');
 		 transform: scale(1);
-		 background-position-y: -150px;
+		 background-position-y: 20%;
          background-position-x: 1px;
 		 background-repeat: no-repeat;
 	 }
+
+	 .hero-image.about-us{
+		background-position-y: 40%;
+	}
+
+	 .hero-image.community{
+		background-position-y: 50%;
+		background-position-x: 25px;
+	}
 	 
 	 .hero-image::before{
 		 display: block;
@@ -377,8 +417,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 		 width: 75%;
 	 }
 	 
-	 .hero-text{
+	 .hero-text.home{
 		 top: 40%;
+	 }
+
+	 .hero-text h2{
+		 font-size: 90px;
 	 }
  
 	 button.call-to-action{
@@ -473,7 +517,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
  
  .copy-right{
 	 font-family: inherit;
-	 font-size: 16px;
+	 font-size: 11px;
 	 text-align: center;
 	 padding: 15px 0;
  }
@@ -513,6 +557,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
  
 	 .copy-right{
 		 padding: 25px 0;
+		 font-size: 12px;
 	 }
  }
 
@@ -766,6 +811,7 @@ section.services h3{
 	}
 }
 
+
 /**Biography Styling**/
 section.biography{
 	width: 80%;
@@ -921,4 +967,338 @@ section.get-in-touch h4{
 		font-size: 2rem;
 		padding-right: 50px;
 	}
+}
+
+
+ /***********About Us Page*************/
+
+ section.about-us{
+	width: 100%;
+	margin: 50px auto 0 auto;
+ } 
+
+ .about-us-header{
+	margin: 20px 5%;
+ }
+
+ .about-us-info{
+	margin: 0 5%;
+	font-size: 16px;
+ }
+
+ .about-us-skills{
+	margin: 50px 5%;
+ }
+
+ .about-us-skills h2{
+	margin-bottom: 30px;
+ }
+
+ .skill{
+	display: flex;
+	align-items: center;
+	margin: 15px 0;
+ }
+
+ .skill p{
+	width: 90%;
+	margin-left: 30px;
+ }
+
+ .about-us-achievements h2{
+	text-align: center;
+	padding-top: 40px;
+	margin-bottom: 30px;
+ }
+
+ .about-us-achievements{
+	background-image: url('/images/services-background.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 850px; 
+ }
+
+ .achievements-container{
+	width: 85%;
+	margin: auto;
+ }
+
+ .achievement{
+	margin: 30px 0;
+	background-color: white;
+	padding: 2rem;
+	border-radius: 20px;
+	display: flex;
+ }
+
+ .achievement-text{
+	width: 95%;
+	margin-left: 20px;
+ }
+
+ .achievement-text h5{
+	font-size: 20px;
+ }
+
+ .achievement-text blockquote{
+	margin-top: 2px;
+	font-size: 16px;
+ }
+
+ h6{
+	color: #99C5E5
+ }
+
+ .about-us-profile{
+	display:none;
+}
+
+h1{
+	display: none;
+}
+
+ @media only screen and (min-width: 992px) {
+	h1{
+		font-size: 40px;
+		margin: 0 5% 20px 5%;
+		display: block;
+	}
+
+	.about-us-profile{
+		display: block;
+		margin-bottom: 20px;
+		width: 326px;
+	}
+
+	.about-us-header{
+		text-align: center;
+		float: left;
+	 }
+
+	.about-us-profile img{
+		width: 100%;
+		border-radius: 50%;
+	}
+
+	section.about-us{
+		width: 100%;
+		max-width: 1400px;
+		margin: auto;
+		display: flex;
+	} 
+
+	.about-us-left{
+		width: 95%;
+		margin-top: 60px;
+	}
+
+	.about-us-achievements h2{
+		text-align: start;
+		margin-left: 15%;
+		margin-bottom: 50px;
+	 }
+
+	 .about-us-achievements{
+		margin: auto;
+		height: 100%;
+		padding-top: 60px;
+	 }
+
+	 .achievements-container{
+		width: 70%;
+		margin: auto;
+	 }
+
+	 .achievement{
+		margin: 30px 0;
+		background-color: white;
+		padding: 1rem 2rem;
+		border-radius: 20px;
+		display: flex;
+	 }
+
+	 .achievement-text{
+		width: 300px;
+	 }
+
+	 .achievement-text h5{
+		font-size: 16px;
+	 }
+
+	 h6{
+		font-size: 12px;
+	 }
+
+	 .achievement-text blockquote{
+		font-size: 12px;
+	 }
+
+	 .skills-container{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+	 }
+
+	 .skill p{
+		font-size: 16px;
+	 }
+ }
+
+  /***********Community Page*************/
+section.community-wellness{
+	width: 100%;
+	padding: 0 5%;
+}
+
+.community-left-side{
+	margin-top: 50px;
+}
+
+.community-left-side h2{
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.community-wellness-info-text{
+	margin-bottom: 50px;
+}
+
+.community-wellness-info-video{
+	margin: auto;
+	width: 95%;
+}
+
+.community-wellness-info-video video{
+	width: 100%;
+	border-radius: 15px;
+}
+
+.community-right-side{
+	margin: 70px auto;
+}
+
+.community-right-side a{
+	text-decoration: none;
+	color: black;
+}
+
+.community-about-me-card-container{
+	position: relative;
+	width: 300px;
+	height: 534px;
+	margin: auto;
+	background-color: #99C5E5;
+	border-radius: 15px;
+}
+
+.community-about-me-card{
+	position: absolute;
+	left: 5%;
+	top: 3%;
+	width: 98%;
+	height: 100%;
+	background-color: white;
+	border-radius: 15px;
+	box-shadow: 1px 1px 5px lightgray;
+}
+
+.community-about-me-card h3{
+	margin: 20px;
+}
+
+.community-about-me-card-header{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: auto;
+}
+
+.community-about-me-card-body{
+	text-align: center;
+	margin: 20px;
+	font-size: 15px;
+}
+
+.community-about-me-profile{	
+	width: 60%;
+}
+
+.community-about-me-profile img{
+	width: 100%;
+	border-radius: 50%;
+}
+
+.community-paralax{
+	display: none;
+}
+
+@media only screen and (min-width: 992px) {
+	section.community-wellness{
+		display: flex;
+		max-width: 1500px;
+		margin: auto;
+		margin-bottom: 50px;
+	}
+
+	.community-left-side{
+		width: 90%;
+		padding: 0 5%;
+	}
+
+	.community-left-side h2{
+		text-align: left;
+	}
+
+	.community-left-side h2 br{
+		display: none;
+	}
+
+	.community-wellness-info{
+		display: flex;
+		flex-direction: column-reverse;
+	}
+
+	.community-wellness-info-text{
+		margin-top: 50px;
+	}
+
+	.community-paralax{
+		display: block;
+		height: 415px;
+		width: 100%;
+		background-image: url('/images/community-engagement-paralax.png');
+		background-size: cover;
+		background-position-y: -5%;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		position: relative;
+	}
+
+	.community-paralax-container{
+		width: 100%;
+		height: 100%;
+		color: white;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.community-paralax-container h2{
+		z-index: 5;
+		font-size: 72px;
+		font-family: Aurel-light, Arial, Helvetica, sans-serif;
+	}
+
+	.community-paralax::before{
+		display: block;
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background: linear-gradient(rgba(18, 19, 44, 0.5), rgb(10, 11, 19));
+	}
+	
 }

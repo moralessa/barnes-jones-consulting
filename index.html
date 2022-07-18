@@ -6,7 +6,11 @@
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <script src="https://kit.fontawesome.com/2635eb7662.js" crossorigin="anonymous"></script>
-    <script src="app.js" type="module" defer></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="nav.js" defer></script>
+    <script src="swiper-initialization-home.js" defer></script>
+    
     <title>Barnes Jones Consulting</title>
 </head>
 <body>
@@ -14,37 +18,43 @@
         <nav>
             <div class="nav-container">
                 <div class="logo-container">
-                    <a href="#"><img src="images/BJC Horizontal Just Logo White.png" alt="Barnes Jones Consulting Logo" width="50"></a>
+                    <a href="#"><img src="images/BJC Horizontal Just Logo White.png" alt="Barnes Jones Consulting Logo"
+                            width="50"></a>
                 </div>
                 <div class="open-menu"><i class="fa-solid fa-bars"></i></div>
                 <ul class="menu">
                     <div class="left-side">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">Community Engagement</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Continuing Education</a></li>
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="about.html" class="nav-link">About</a></li>
+                        <li><a href="#" class="nav-link">Contact</a></li>
+                        <li><a href="community.html" class="nav-link">Community Engagement</a></li>
+                        <li><a href="#" class="nav-link">Services</a></li>
+                        <li><a href="#" class="nav-link">Continuing Education</a></li>
                     </div>
                     <div class="right-side">
-                        <li><a href="#"> <img src="./images/Envelope.png" alt="mail icon"> dacbr@barnes.jones.com</a></li>
+                        <li><a href="#"> <img src="./images/Envelope.png" alt="mail icon"> dacbr@barnes.jones.com</a>
+                        </li>
                         <li><a href="#"> <img src="./images/phone.png" alt="phone icon"> +1 (757) 338 - 5600</a></li>
                     </div>
                 </ul>
             </div>
         </nav>
+    </header>
 
-        <div class="hero-container">
+     <div class="hero-container">
             <div class="hero-image"></div>
-            <div class="hero-text">
+            <div class="hero-text home">
                 <div class="hero-logo">
                     <img src="./images/hero-logo.png" alt="">
                 </div>
-                <button class="call-to-action primary">Diagnostic Imaging</button>
-                <button class="call-to-action secondary">Chiropractic</button>
+                <button class="call-to-action primary">
+                    <a href="#">Diagnostic Imaging</a>
+                </button>
+                <button class="call-to-action secondary">
+                    <a href="#">Learn More</a>
+                </button>
             </div>
-        </div>
-    </header>
+    </div>
 
     <section class="hours-location">
         <div class="hours">
@@ -313,6 +323,5 @@
         </div>
     </footer>
 
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </body>
 </html>
