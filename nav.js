@@ -52,5 +52,4 @@ window.addEventListener('resize', ()=>{
 })
 
 hambugerMenu.addEventListener('click', expandMobileNav);
-
 heroContainerObserver.observe(heroContainer);
