@@ -254,7 +254,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
  
 	 .right-side{
 		 position: absolute;
-		 top: -9%;
+		 display: grid;
+		 grid-template-rows: 45px 1fr;
+		 top: 5%;
 		 left: 80%;
 		 margin-right: 50px;
 	 }
@@ -539,8 +541,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	 }
  
 	 .contact-list li {
-		 display: block;
-		 margin: 10px 0;
+		display: grid;
+		grid-template-columns: 1fr 12fr;
+	 }
+	 
+	 .contact-list li p{
+		width: 200px
 	 }
  
 	 .footer-logo{
