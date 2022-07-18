@@ -214,6 +214,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 		margin: auto;
 		padding: 20px 0;
 		height: 120px;
+		transition: all 500ms ease-in-out;
+	 }
+
+	 .nav-container.slim{
+		height: 80px;
 	 }
  
 	 .menu {
@@ -241,6 +246,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
  
 	 .logo-container img{
 		 width: 60px;
+		 transition: all 500ms ease-in-out;
+	 }
+
+	 .logo-container.slim img{
+		width: 35px;
 	 }
  
 	 .left-side li{
@@ -250,6 +260,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
  
 	 .left-side{
 		 margin-top: 60px;
+		 transition: all 500ms ease-in-out;
+	 }
+
+	 .left-side.slim{
+		margin-top: 20px;
 	 }
  
 	 .right-side{
@@ -259,6 +274,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 		 top: 5%;
 		 left: 80%;
 		 margin-right: 50px;
+	 }
+
+	 .right-side.slim{
+		display: none;
 	 }
  
 	 .right-side li a{
