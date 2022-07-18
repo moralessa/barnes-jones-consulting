@@ -673,7 +673,7 @@ section.hours-location h3{
 section.services{
 	width: 100%;
 	height: 600px;
-	background-image: url('http://barnes-jones-consulting-dummy.local/wp-content/uploads/2022/07/services-background.png');
+	background-image: url('../images/services-background.png');
 	background-size: cover;
 	background-repeat: no-repeat;
 	text-align: center;
