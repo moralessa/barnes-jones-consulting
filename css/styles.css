@@ -1292,7 +1292,7 @@ section.community-wellness{
 		display: block;
 		height: 415px;
 		width: 100%;
-		background-image: url('/images/community-engagement-paralax.png');
+		background-image: url('../images/community-engagement-paralax.png');
 		background-size: cover;
 		background-position-y: -5%;
 		background-repeat: no-repeat;
