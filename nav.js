@@ -6,7 +6,7 @@ const leftSideNavContainer = document.querySelector('.left-side');
 const rightSideNavContainer = document.querySelector('.right-side');
 const heroContainer = document.querySelector('.hero-container');
 const heroContainerOptions = {
-    rootMargin: "-300px 0px 0px 0px"
+    rootMargin: "-400px 0px 0px 0px"
 }
 const heroContainerObserver = new IntersectionObserver((entries, heroContainerObserver)=>{
     entries.forEach(entry =>{

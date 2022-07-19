@@ -326,6 +326,17 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	background-position-x: 10px;
 	transform: scale(1.4);
  }
+
+ .hero-image.education{
+	background-image: url('../images/education-hero.jpg');
+ }
+
+ .hero-image.services{
+	background-image: url('../images/services-hero.jpg');	
+	background-size: cover;	
+	background-position-y: 10px;
+	background-repeat: no-repeat;
+ }	
  
  .hero-image::before{
 	 display: block;
@@ -406,7 +417,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	 }
  
 	 .hero-image{    
-		 background-image:url('../images/home-hero-mobile.jpg');
 		 transform: scale(1);
 		 background-position-y: 20%;
          background-position-x: 1px;
@@ -421,6 +431,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 		background-position-y: 50%;
 		background-position-x: 25px;
 	}
+
 	 
 	 .hero-image::before{
 		 display: block;
@@ -694,12 +705,12 @@ section.services h3{
 	display: none;
 }
 
- .swiper {
+.services-cards-mobile .swiper {
 		width: 100%;
 		height: 90%;
 	  }
 
-	  .swiper-slide {
+	  .services-cards-mobile .swiper-slide {
 		text-align: center;
 		font-size: 18px;
 		background: transparent;
@@ -730,12 +741,12 @@ section.services h3{
 
    
 
-	  .swiper-pagination-bullet{
+	  .services-cards-mobile .swiper-pagination-bullet{
 		background-color: transparent !important;
 		border: 2px solid #99C5E5 !important;
 	  }
 
-	  .swiper-pagination-bullet-active{
+	  .services-cards-mobile .swiper-pagination-bullet-active{
 		background-color: #99C5E5 !important;
 	  }
 
@@ -1037,7 +1048,7 @@ section.get-in-touch h4{
  }
 
  .about-us-achievements{
-	background-image: url('/images/services-background.png');
+	background-image: url('../images/services-background.png');
 	background-size: cover;
 	background-repeat: no-repeat;
 	height: 850px; 
@@ -1054,6 +1065,7 @@ section.get-in-touch h4{
 	padding: 2rem;
 	border-radius: 20px;
 	display: flex;
+	box-shadow: 1px 1px 5px lightgray;
  }
 
  .achievement-text{
@@ -1325,5 +1337,136 @@ section.community-wellness{
 		width: 100%;
 		background: linear-gradient(rgba(18, 19, 44, 0.5), rgb(10, 11, 19));
 	}
-	
+}
+
+  /***********Education Page*************/
+
+section.education{
+	padding: 10%;
+}
+
+.education-right h2{
+	text-align: center;
+	margin-bottom: 15px;
+}
+
+.education-left video{
+	margin-top: 50px;
+	width: 100%;
+	border-radius: 20px;
+}
+
+@media only screen and (min-width: 992px) {
+	section.education{
+		margin: 50px 20px;
+		width: 100%;
+		padding: 0;
+		display: flex;
+		align-items: center;
+		flex-direction: row-reverse;
+	}
+
+	.education-right h2{
+		text-align: left;
+	}
+
+	.education-right{
+		width: 55%;
+		padding: 0 100px;
+	}
+
+	.education-left{
+		width: 45%;
+		padding-left: 50px;
+	}
+}
+
+  /***********Services Page*************/
+section.diagnostic-imaging-services{
+	width: 100%;
+	padding: 10%;
+}
+
+.diagnostic-imaging-services-right h2{
+	font-size: 22px; 
+	margin-bottom: 20px;
+}
+
+
+
+.diagnostic-imaging-services-left{
+	display: none;
+}
+
+.fee-schedule-mobile-container{
+	position: relative;
+	width: 100%;
+	height: 450px;
+}
+
+.fee-schedule-mobile-container .swiper {
+	width: 100%;
+	height: 100%;
+	background: #000;
+  }
+
+.fee-schedule-mobile-container .swiper-slide {
+	font-size: 18px;
+	color: #fff;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 30px 10%;
+  }
+
+.fee-schedule-mobile-container .parallax-bg {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 130%;
+	height: 100%;
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center;
+  }
+
+  .fee-schedule-mobile-container .parallax-bg::before{
+	display: block;
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: linear-gradient(to left, rgba(18, 19, 44, 0.5), rgb(10, 11, 19));
+  }
+
+  .fee-schedule-mobile-container .swiper-slide .title {
+	font-size: 24px;
+	font-weight: 300;
+	text-align: center;
+	font-family: Aurel-dark, Arial, Helvetica, sans-serif;
+  }
+
+  .fee-schedule-mobile-container .swiper-slide .subtitle {
+	font-family: Aurel-dark, Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	margin: 20px 0;
+  }
+
+  .fee-schedule-mobile-container .swiper-slide .text {
+	font-family: MyriadPro-Regular, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	max-width: 500px;
+	line-height: 1.3;
+  }
+
+  .fee-schedule-mobile-container .swiper-slide .text ul{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+  }
+
+  .fee-schedule-mobile-container .swiper-button-next, .fee-schedule-mobile-container .swiper-button-prev{
+	position: absolute;
+	top: 90%;
 }
