@@ -337,6 +337,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	background-position-y: 10px;
 	background-repeat: no-repeat;
  }	
+
+ .hero-image.contact-page{
+	background-image: url('../images/contact-hero.jpg');
+	background-position-y: 80%;
+	background-repeat: no-repeat;
+ }
  
  .hero-image::before{
 	 display: block;
@@ -395,10 +401,18 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	 border: none;
 	 transition: all 500ms ease-in-out;
  }
+
+ button.call-to-action a{
+	transition: all 500ms ease-in-out;
+ }
  
  button.call-to-action:hover{
 	 cursor: pointer;
-	 opacity: .8;
+	 background-color: #12132C;
+ }
+
+ button.call-to-action:hover a{
+	color:#99C5E5;	
  }
  
  button.primary{
@@ -430,6 +444,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	 .hero-image.community{
 		background-position-y: 50%;
 		background-position-x: 25px;
+	}
+
+	.hero-image.contact-page{
+		background-position-y: 50%;
 	}
 
 	 
@@ -545,6 +563,13 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
  
  .footer-social-links a:hover{
 	 opacity: .8;
+ }
+ .footer-links a{
+	transition: all 200ms ease-in-out;
+ }
+
+ .footer-links a:hover{
+	color:#99C5E5;
  }
  
  .copy-right{
@@ -1117,6 +1142,7 @@ h1{
 	.about-us-header{
 		text-align: center;
 		float: left;
+		margin: 20px 50px;
 	 }
 
 	.about-us-profile img{
@@ -1602,4 +1628,52 @@ section.fee-schedule-desktop{
 		margin-left: 15px;
 	}
 
+}
+
+  /***********Contact Page*************/
+section.contact-options{
+	width: 70%;
+	margin: 50px auto;
+}
+
+
+.contact-option{
+	display: flex;
+	align-items: center;
+	margin: 25px 0;
+}
+
+.contact-option h4{
+	font-size: 18px;
+}
+
+.contact-option p{
+	margin-top: 5px;
+	font-size: 16px;
+}
+
+.contact-icon-container{
+	margin-right: 20px;
+}
+
+.contact-icon-container img{
+	width: 75px;
+}
+
+section.contact-options .social-media-links{
+	margin-top: 5px;
+	display: flex;
+	list-style-type: none;
+}
+
+section.contact-options .social-media-links li{
+	margin: 5px;
+}
+
+section.contact-options .social-media-links li a{
+	transition: all 200ms ease-in-out;
+}
+
+section.contact-options .social-media-links li a:hover{
+	opacity: .8;
 }
