@@ -986,9 +986,13 @@ section.get-in-touch{
 	text-align: center;
 }
 
+.get-in-touch-container h2.mobile{
+	font-size: 20px;
+	display: block;
+}
 
-section.get-in-touch h4{
-	font-family: Aurel-light, Arial, Helvetica, sans-serif;
+.get-in-touch-container h2.desktop{
+	display: none;
 }
 
 @media only screen and (min-width: 992px) {
@@ -999,9 +1003,12 @@ section.get-in-touch h4{
 		justify-content: center;
 	}
 
-	section.get-in-touch h4{
-		font-size: 2rem;
-		padding-right: 50px;
+	.get-in-touch-container h2.mobile{
+		display: none;
+	}
+
+	.get-in-touch-container h2.desktop{
+		display: block;
 	}
 }
 
@@ -1388,11 +1395,8 @@ section.diagnostic-imaging-services{
 }
 
 .diagnostic-imaging-services-right h2{
-	font-size: 22px; 
 	margin-bottom: 20px;
 }
-
-
 
 .diagnostic-imaging-services-left{
 	display: none;
@@ -1469,4 +1473,133 @@ section.diagnostic-imaging-services{
   .fee-schedule-mobile-container .swiper-button-next, .fee-schedule-mobile-container .swiper-button-prev{
 	position: absolute;
 	top: 90%;
+}
+
+.fee-schedule-mobile-container .swiper-pagination-bullet{
+	width: 12px;
+	height: 12px;
+	border: 2px solid white;
+}
+
+section.chiropractic-services{
+	padding: 10%;
+}
+
+section.chiropractic-services h2{
+	margin-bottom: 20px;
+}
+
+section.fee-schedule-desktop{
+	display: none;
+}
+
+
+@media only screen and (min-width: 992px) {
+	section.diagnostic-imaging-services{
+		width: 100%;
+		padding: 0;
+		margin: 50px auto;
+		display: flex;
+		flex-direction: row-reverse;
+		align-items: center;
+	}
+
+	.diagnostic-imaging-services-left{
+		display: block;
+		width: 45%;
+		padding-left: 50px;
+	}
+
+	.diagnostic-imaging-services-left video{
+		width: 100%;
+		border-radius: 20px;
+	}
+
+	.diagnostic-imaging-services-right{
+		width: 55%;
+		padding: 0 100px;
+	}
+
+	.fee-schedule-mobile-container{
+		display: none;
+	}
+
+	section.fee-schedule-desktop{
+		display: block;
+		font-family: MyriadPro-Regular, Arial, Helvetica, sans-serif;
+		width: 100%;
+		height: 705px;
+		position: relative;
+	}
+
+	.fee-schedule-desktop-background-image{
+		position: relative;
+		width: 100%;
+		height: 100%;
+		display: block;
+		background-image: url('../images/fee-schedule-desktop.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+	.fee-schedule-desktop-background-image::before{
+		display: block;
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background: linear-gradient(to left, rgba(18, 19, 44, 0.5), rgb(10, 11, 19));
+	}
+
+	.fee-schedule-desktop-header p{
+		margin-top: 20px;
+		width: 420px;
+	}
+
+	.fee-schedule-desktop-container{
+		position: absolute;
+		color: white;
+		top: 10%;
+		left: 15%;
+	}
+
+	.fee-schedule-desktop-container ul{
+		list-style-type: none;
+	}
+
+	.fee-schedule-desktop-body{
+		display: flex;
+	}
+
+	.fee-left{
+		margin-right: 100px;
+	}
+
+	.fee-service{
+		margin-top: 50px;
+	}
+
+	.fee-service-title{
+		position: relative;
+		margin-left: 15px;
+	}
+
+	.fee-service-title::before{
+		display: block;
+		position: absolute;
+		top: 0%;
+		left: -15px;
+		content: '';
+		height: 50px;
+		width: 4px;
+		background-color: white;
+		margin-right: 50px;
+	}
+
+	.fee-service-body{
+		margin-left: 15px;
+	}
+
 }
