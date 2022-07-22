@@ -1677,3 +1677,79 @@ section.contact-options .social-media-links li a{
 section.contact-options .social-media-links li a:hover{
 	opacity: .8;
 }
+
+section.FAQ{
+	background-image: url('../images/services-background.png');
+	background-size: cover;
+	padding: 10%;
+}
+
+.accordion{
+	font-family: MyriadPro-Regular, Arial, Helvetica, sans-serif;
+	margin-top: 20px;
+	max-width: 1500px;
+    width: 100%;
+}
+
+
+.accordion .content-box{
+    position: relative;
+    margin: 10px 0;
+}
+
+.content, .label{
+	font-size: 18px;
+}
+
+.accordion .content-box .label{
+    position: relative;
+    padding: 10px;
+    background-color: #99C5E5;
+    color: white;
+    cursor: pointer;
+	border-radius: 5px;
+	height: 60px;
+	display: flex;
+	align-items: center;
+	color: black;
+}
+
+.accordion .content-box .content{
+    position: relative;
+    background-color: transparent;
+	max-height: 0px;
+    overflow: hidden;
+    transition: all 800ms ease-in-out;
+    overflow-y: auto;
+	margin-top: 10px;
+	padding: 0 15px
+}
+
+.accordion .content-box.active .content{
+    max-height: 800px;
+}
+
+.accordion .content-box.active .label{
+	background-color: #3B3B4C;
+	color: white;
+}
+
+@media only screen and (min-width: 992px) {
+	section.contact-options{
+		width: 80%;
+		max-width: 1500px;
+		margin: 50px auto;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+	}
+
+	.contact-option{
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+
+	.contact-option:nth-child(3) p{
+		width: 150px;
+	}
+}
